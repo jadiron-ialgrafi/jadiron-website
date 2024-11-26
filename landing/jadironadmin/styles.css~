@@ -1,0 +1,76 @@
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: #f4f6f9;
+}
+
+.navbar {
+    background-color: #343a40;
+}
+
+.navbar-brand, .nav-link {
+    color: #fff !important;
+}
+
+.container-fluid {
+    padding: 30px;
+}
+
+.dashboard-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-10px);
+}
+
+.chart-container {
+    position: relative;
+    height: 400px;
+}
+
+.chartjs-render-monitor {
+    max-width: 100% !important;
+}
+
+.small-box {
+    position: relative;
+    background: #17a2b8;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.small-box:hover {
+    transform: translateY(-5px);
+}
+
+.small-box .icon {
+    font-size: 90px;
+    opacity: 0.2;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.card {
+    animation: fadeInUp 0.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+

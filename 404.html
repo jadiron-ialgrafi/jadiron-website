@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - الصفحة غير موجودة</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Tajawal', sans-serif;
+            background-color:#ffffff;
+            color: #1c3656;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo img {
+            width: 250px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #FFCC31;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .illustration {
+            margin: 30px auto;
+            animation: float 3s infinite ease-in-out;
+        }
+
+        .illustration img {
+            max-width: 300px;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 50px;
+            color: #fff;
+            background-color: #1c3656;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn:hover {
+            background-color: #fff;
+            color: #1c3656;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .logo img {
+                width: 200px;
+            }
+
+            .illustration img {
+                max-width: 100px;
+            }
+
+            .btn {
+                font-size: 14px;
+                padding: 8px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://jadiron.sa/images/logo.png" alt="شعار جديرون">
+        </div>
+        <h1>404</h1>
+        <p>عذرًا، الصفحة التي تبحث عنها غير موجودة. يمكنك العودة إلى الصفحة الرئيسية أو التواصل معنا للمساعدة.</p>
+        <div class="illustration">
+            <img src="https://jadiron.sa/images/error.gif" alt="error">
+        </div>
+        <div class="btn-container">
+            <a href="/" class="btn">العودة إلى الصفحة الرئيسية</a>
+            <a href="/#contact" class="btn">تواصل معنا</a>
+        </div>
+    </div>
+</body>
+</html>

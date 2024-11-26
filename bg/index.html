@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8"> <!-- تحديد الترميز ليكون UTF-8 لدعم اللغة العربية -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- لجعل الصفحة متوافقة مع الأجهزة المحمولة -->
+  <title>خلفية متحركة بتأثير الأمواج</title> <!-- عنوان الصفحة -->
+  <style>
+    /* إعدادات الجسم */
+    body, html {
+      margin: 0; /* إزالة الهوامش حول الصفحة */
+      padding: 0; /* إزالة الحشو حول الصفحة */
+      overflow: hidden; /* إخفاء الشريط الجانبي لمنع التمرير */
+      height: 100vh; /* ضبط الارتفاع ليملأ كامل نافذة العرض */
+      display: flex; /* استخدام flexbox لتوسيط المحتوى */
+      align-items: center; /* محاذاة العناصر عموديًا إلى الوسط */
+      justify-content: center; /* محاذاة العناصر أفقيًا إلى الوسط */
+      font-family: Arial, sans-serif; /* تحديد خط النص */
+      color: white; /* تحديد لون النص ليكون أبيض */
+      text-align: center; /* محاذاة النص إلى الوسط */
+      background-color: #000; /* لون خلفية أسود في حالة عدم تحميل الأنماط المتدرجة */
+    }
+
+    /* خلفية متدرجة ديناميكية بتأثير الأمواج */
+    .animated-background {
+      position: absolute; /* تثبيت الخلفية على الشاشة بأكملها */
+      top: 0; /* تثبيت العنصر في أعلى الصفحة */
+      left: 0; /* تثبيت العنصر في يسار الصفحة */
+      width: 100%; /* ملء العرض بالكامل */
+      height: 100%; /* ملء الارتفاع بالكامل */
+      background: radial-gradient(circle at 15% 30%, rgba(0, 51, 102, 0.8), transparent 50%), 
+                  radial-gradient(circle at 80% 20%, rgba(0, 80, 130, 0.8), transparent 50%), 
+                  radial-gradient(circle at 60% 70%, rgba(0, 40, 80, 0.8), transparent 50%),
+                  radial-gradient(circle at 25% 75%, rgba(0, 70, 120, 0.8), transparent 50%);
+      /* تدرجات دائرية متعددة بألوان شبه شفافة تشبه الأمواج */
+      background-size: 300% 300%; /* ضبط حجم الخلفية ليكون أكبر من الشاشة للحصول على تأثير حركة كبير */
+      animation: waterMovement 10s linear infinite, waveMovement 15s ease-in-out infinite; /* تشغيل حركتين مختلفتين على الخلفية */
+    }
+
+    /* حركة الخلفية لتأثير الأمواج */
+    @keyframes waterMovement {
+      0% {
+        background-position: 0% 0%; /* بداية الحركة من الزاوية العلوية اليسرى */
+      }
+      50% {
+        background-position: 100% 100%; /* تحرك الخلفية إلى الزاوية السفلية اليمنى */
+      }
+      100% {
+        background-position: 0% 0%; /* العودة إلى الموضع الأول لإنشاء حركة متكررة */
+      }
+    }
+
+    /* حركة بطيئة لإضافة التموجات */
+    @keyframes waveMovement {
+      0% {
+        transform: scale(1) translateX(0); /* البداية بدون تغيير */
+      }
+      50% {
+        transform: scale(1.05) translateX(-10px); /* تكبير بسيط وتحريك للخلفية لتظهر وكأنها تموج */
+      }
+      100% {
+        transform: scale(1) translateX(0); /* العودة للوضع الأول لاستمرار التموج */
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- خلفية متحركة -->
+  <div class="animated-background"></div> <!-- عنصر الخلفية المتحركة بأكملها -->
+
+  <!-- محتوى الصفحة -->
+  <div class="content">
+    <h1>مرحبًا بك في موقعنا</h1> <!-- عنوان ترحيبي في الصفحة -->
+    <p>استمتع بتأثير الخلفية الحركي الذي يشبه تدفق الأمواج</p> <!-- وصف بسيط للزائر -->
+  </div>
+</body>
+</html>
